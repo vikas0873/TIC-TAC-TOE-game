@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.players{
+    border: 2px solid rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    font-size: 30px;
+    margin-top: 30px;
+}
+.players div{
+    padding: 15px 25px;
+    border-radius: 15px;
+    border: 2px solid white;
+}
+.players .active{
+    background: rgb(255 104 0);
+    color: aliceblue;
+}
+.game-board{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+
+}
+.cell{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    
+}
+.cell.X{
+    color: #ff0000;
+}
+.cell.O{
+    color: rgb(57, 251, 4);
+}
+.cell:nth-child(1){
+    border-left: none;
+    border-top: none;
+}
+.cell:nth-child(2){
+    border-top: none;
+}
+.cell:nth-child(3){
+    border-right: none;
+    border-top: none;
+}
+.cell:nth-child(4){
+    border-left: none;
+}
+.cell:nth-child(6){
+    border-right: none;
+}
+.cell:nth-child(7){
+    border-left: none;
+    border-bottom: none;
+}
+.cell:nth-child(8){
+    border-bottom: none;
+}
+.cell:nth-child(9){
+    border-right: none;
+    border-bottom: none;
+}
+
+.result{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: rgb(0, 0, 0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.result h1{
+    color: #fff;
+    font-size: 50px;
+    background: rgb(0, 0,100,0.5);
+    padding: 15px 25px;
+}
+
+.result button{
+    font-size: 36px;
+    background: rgb(255 104 0);
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+.inactive{
+    display: none;
+}
+
+.disabled{
+    pointer-events: none;
+}
